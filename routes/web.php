@@ -7,6 +7,10 @@ use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\ExportController;
 
+Route::get('/', function () {
+    return view('layout.index');
+});
+
 Route::get('/pegawai', [PegawaiController::class, 'index'])->name('pegawai.index');
 Route::post('/pegawai/cari', [PegawaiController::class, 'cari'])->name('pegawai.cari');
 
